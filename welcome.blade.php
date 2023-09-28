@@ -3,19 +3,13 @@
 @section("content")
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <div class="title m-b-md">
+        <h1 class="title m-b-md text-center">
             Planets
-        </div>
-
-        <!-- @for($i = 0; $i < count($planets); $i++) <span>{{ $planets[$i] . " - " }}</span>
-                @endfor -->
+        </h1>
 
         @foreach($planets as $plant)
         <div>
-            {{ $loop->index }} {{ $plant . " "}}
-            @if ($loop->first)
-            <span>- Eerst</span>
-            @endif
+            <h2>{{ $plant['name']}}</h2> {{ $plant['description'] }}
         </div>
         @endforeach
     </div>
