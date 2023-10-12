@@ -1,17 +1,22 @@
-@extends("layout.layout")
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@section("content")
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <h1 class="title m-b-md text-center">
-            Planets
-        </h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        @foreach($planets as $plant)
-        <div>
-            <h2>{{ $plant['name']}}</h2> {{ $plant['description'] }}
-        </div>
-        @endforeach
-    </div>
-</div>
-@endsection
+    <title>Laravel</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="antialiased">
+
+    <h1>{{ $planet['name'] }}</h1>
+    <p>{{ $planet['description'] }}</p>
+
+</body>
+
+</html>
